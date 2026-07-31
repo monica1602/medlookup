@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedLookup — Busca de Medicamentos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚕</span>
+        <span class="logo-text">Med<strong>Lookup</strong></span>
+      </div>
+      <p class="header-tagline">Consulta de equivalência farmacêutica</p>
+    </div>
+  </header>
+
+  <!-- Hero / Search -->
+  <main class="main">
+    <section class="hero">
+      <h1 class="hero-title">Encontre o remédio certo</h1>
+      <p class="hero-subtitle">
+        Digite o <strong>nome científico</strong> (DCI) do medicamento e veja todas as
+        opções disponíveis no mercado brasileiro com seus nomes comerciais.
+      </p>
+
+      <form class="search-form" id="searchForm" autocomplete="off">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Ex: paracetamol, ibuprofeno, metformina…"
+            list="suggestions"
+            spellcheck="false"
+          />
+          <datalist id="suggestions"></datalist>
+          <button type="submit" class="search-btn">Buscar</button>
+        </div>
+        <p class="search-hint">Use o nome científico (DCI) — ex: <em>amoxicilina</em>, <em>losartana</em>, <em>omeprazol</em></p>
+      </form>
+    </section>
+
+    <!-- Results area -->
+    <section class="results-section" id="resultsSection" aria-live="polite">
+      <!-- Filled dynamically -->
+    </section>
+
+    <!-- Quick-access pills -->
+    <section class="quick-access" id="quickAccess">
+      <h2 class="quick-title">Buscas frequentes</h2>
+      <div class="pills">
+        <button class="pill" data-q="paracetamol">Paracetamol</button>
+        <button class="pill" data-q="ibuprofeno">Ibuprofeno</button>
+        <button class="pill" data-q="amoxicilina">Amoxicilina</button>
+        <button class="pill" data-q="omeprazol">Omeprazol</button>
+        <button class="pill" data-q="metformina">Metformina</button>
+        <button class="pill" data-q="losartana">Losartana</button>
+        <button class="pill" data-q="dipirona">Dipirona</button>
+        <button class="pill" data-q="sertralina">Sertralina</button>
+        <button class="pill" data-q="sinvastatina">Sinvastatina</button>
+        <button class="pill" data-q="levotiroxina">Levotiroxina</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      ⚠️ <strong>Aviso:</strong> Este site é apenas informativo. Sempre consulte um
+      médico ou farmacêutico antes de tomar qualquer medicamento.
+    </p>
+    <p class="footer-copy">© 2026 MedLookup — Uso exclusivamente educacional</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
